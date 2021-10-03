@@ -23,8 +23,6 @@ function App() {
     fetchVendors();
   }, []);
   const createSubmit = async (formData) => {
-    const newVendor = await postVendor(formData);
-    setVendors((prevState) => [...prevState, newVendor]);
     //
     // const templateParamsForClient = {
     //   send_to: "", //ADD
@@ -55,7 +53,8 @@ function App() {
     );
 
     alert(`Vendor ${formData.company} Added!`);
-
+    const newVendor = await postVendor(formData);
+    setVendors((prevState) => [...prevState, newVendor]);
     //
   };
 
