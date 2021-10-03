@@ -51,35 +51,17 @@ export default function Vendor(props) {
           <span style={{ fontWeight: "bold" }}>Email:</span>{" "}
           {props.vendor.email}
         </p>
-        <p>
-          <span style={{ fontWeight: "bold" }}>Address: </span>
-
-          {props.vendor.address}
-        </p>
       </div>
       <p>
         <span style={{ fontWeight: "bold" }}>Description: </span>
 
         {props.vendor.description}
       </p>
-      <p>
-        <span style={{ fontWeight: "bold" }}>service: </span>
-        {props.vendor.service}
-      </p>
-      <div className="lineFive">
+
+      <div>
         <p>
           <span style={{ fontWeight: "bold" }}>Require Liability: </span>
           {props.vendor.liabilityRequire}
-        </p>
-        <p>
-          <span style={{ fontWeight: "bold" }}>Door Prize for Raffle: </span>
-
-          {props.vendor.prize}
-        </p>
-        <p>
-          <span style={{ fontWeight: "bold" }}>Requesting Canopy: </span>
-
-          {props.vendor.canopy}
         </p>
       </div>
       <p>
