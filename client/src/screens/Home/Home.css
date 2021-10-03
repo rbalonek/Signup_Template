@@ -1,11 +1,11 @@
 .home__container {
   text-align: -webkit-center;
+  /* height: 100vh; */
 }
 .form-holder {
   width: 500px;
   align-items: center;
   margin-bottom: 100px;
-
   /* border: solid black; */
 }
 .logo {

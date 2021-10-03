@@ -10,13 +10,12 @@ export default function Form(props) {
     name: "",
     company: "",
     phone: "",
-    address: "",
     email: "",
-    service: "",
+
     description: "",
-    canopy: "",
+
     liabilityRequire: "",
-    prize: "",
+
     snackBring: "",
     snacks: "",
   });
@@ -25,13 +24,13 @@ export default function Form(props) {
     name,
     company,
     phone,
-    address,
+
     email,
-    service,
+
     description,
-    canopy,
+
     liabilityRequire,
-    prize,
+
     snackBring,
     snacks,
   } = formData;
@@ -60,6 +59,7 @@ export default function Form(props) {
       onSubmit={handleSubmit}
     >
       <TextField
+        className="text-field"
         required
         value={name}
         onChange={handleChange}
@@ -69,6 +69,7 @@ export default function Form(props) {
         variant="outlined"
         name="name"
       />
+      <br />
       <TextField
         required
         value={company}
@@ -79,6 +80,7 @@ export default function Form(props) {
         variant="outlined"
         name="company"
       />
+      <br />
       <TextField
         required
         value={phone}
@@ -89,6 +91,7 @@ export default function Form(props) {
         variant="outlined"
         name="phone"
       />
+      <br />
       <TextField
         required
         value={email}
@@ -99,26 +102,7 @@ export default function Form(props) {
         variant="outlined"
         name="email"
       />
-      <TextField
-        required
-        value={address}
-        onChange={handleChange}
-        type="text"
-        id="standard-basic"
-        label="Address"
-        variant="outlined"
-        name="address"
-      />
-      <TextField
-        required
-        value={service}
-        onChange={handleChange}
-        type="text"
-        id="standard-basic"
-        label="Service Provided"
-        variant="outlined"
-        name="service"
-      />
+      <br />
       <TextField
         required
         value={description}
@@ -129,29 +113,10 @@ export default function Form(props) {
         variant="outlined"
         name="description"
       />
-
-      <label>
-        Will you need a canopy?{" "}
-        <p className="canopy_description">
-          (We can provide one canopy and two chairs)
-        </p>
+      <br />
+      <label className="label__text">
+        We require Liability Insurance for you to participate
       </label>
-      <TextField
-        required
-        id="standard-select"
-        select
-        label="Select"
-        name="canopy"
-        type="text"
-        value={canopy}
-        onChange={handleChange}
-        // helperText="Please select your currency"
-      >
-        <MenuItem value="YES">YES</MenuItem>
-        <MenuItem value="NO">NO</MenuItem>
-      </TextField>
-
-      <label>We require Liability Insurance for you to participate</label>
 
       <TextField
         required
@@ -162,27 +127,11 @@ export default function Form(props) {
         type="text"
         value={liabilityRequire}
         onChange={handleChange}
-        // helperText="Please select your currency"
       >
         <MenuItem value="YES">YES, I understand</MenuItem>
       </TextField>
-
-      <label>Requesting Door Prize for Raffle</label>
-      <TextField
-        required
-        id="standard-select"
-        select
-        label="Select"
-        name="prize"
-        type="text"
-        value={prize}
-        onChange={handleChange}
-        // helperText="Please select your currency"
-      >
-        <MenuItem value="YES">YES, I understand.</MenuItem>
-      </TextField>
-
-      <label>Requesting snacks for your table. (To feed 50-70 people)</label>
+      <br />
+      <label className="label__text">Will you be bringing snacks?</label>
       <TextField
         required
         id="standard-select"
@@ -192,29 +141,34 @@ export default function Form(props) {
         type="text"
         value={snackBring}
         onChange={handleChange}
-        // helperText="Please select your currency"
       >
-        <MenuItem value="YES">YES, I understand</MenuItem>
+        <MenuItem value="YES">YES</MenuItem>
+        <MenuItem value="NO">NO</MenuItem>
       </TextField>
-
-      <label>Snack Choices</label>
-      <TextField
-        required
-        id="standard-select"
-        select
-        label="Select"
-        name="snacks"
-        type="text"
-        value={snacks}
-        onChange={handleChange}
-        // helperText="Please select your currency"
-      >
-        <MenuItem value="Water">Water</MenuItem>
-        <MenuItem value="granola">Granola Bars</MenuItem>
-        <MenuItem value="nuts">Packaged Nuts</MenuItem>
-        <MenuItem value="popcorn">Packaged Popcorn</MenuItem>
-        <MenuItem value="pretzels">Packaged Pretzels</MenuItem>
-      </TextField>
+      <br />
+      {snackBring === "YES" && (
+        <>
+          <label className="label__text">Snack Choices</label>
+          <TextField
+            required
+            id="standard-select"
+            select
+            label="Select"
+            name="snacks"
+            type="text"
+            value={snacks}
+            onChange={handleChange}
+            // helperText="Please select your currency"
+          >
+            <MenuItem value="Water">Water</MenuItem>
+            <MenuItem value="granola">Granola Bars</MenuItem>
+            <MenuItem value="nuts">Packaged Nuts</MenuItem>
+            <MenuItem value="popcorn">Packaged Popcorn</MenuItem>
+            <MenuItem value="pretzels">Packaged Pretzels</MenuItem>
+          </TextField>
+          <br />
+        </>
+      )}
 
       <Button type="submit" variant="contained" color="primary">
         Submit

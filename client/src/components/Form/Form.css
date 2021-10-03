@@ -1,10 +1,19 @@
 .add-guest__form {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 30px;
   border: solid black;
+  border-radius: 5%;
+  box-shadow: 0 4px 14px 0 rgb(0, 0, 0);
 }
 .canopy_description {
   font-size: 12px;
   text-decoration: italic;
+}
+.text-field {
+  /* background-color: red; */
+}
+.label__text {
+  color: red;
+  font-size: 10px;
 }
