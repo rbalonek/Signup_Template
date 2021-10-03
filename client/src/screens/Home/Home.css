@@ -1,0 +1,27 @@
+.home__container {
+  text-align: -webkit-center;
+}
+.form-holder {
+  width: 500px;
+  align-items: center;
+  margin-bottom: 100px;
+
+  /* border: solid black; */
+}
+.logo {
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 650px) {
+  .form-holder {
+    width: 95vw;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  .logo {
+    height: 100px;
+    position: relative;
+  }
+}

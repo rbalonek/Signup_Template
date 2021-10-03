@@ -1,0 +1,10 @@
+.vendor-card__container {
+  border: solid black;
+  padding: 20px;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 10px;
+}
