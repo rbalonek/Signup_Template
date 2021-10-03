@@ -31,6 +31,8 @@ Change API config
 SEARCH //ADD for changes needed
 <br />
 <br />
+heroku create <name of your backend>
+<br />
 git commit -m "message here"
 <br />
 git push heroku master
