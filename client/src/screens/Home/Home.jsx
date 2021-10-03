@@ -5,7 +5,7 @@ import "./Home.css";
 export default function Home(props) {
   return (
     <div className="home__container">
-      <h1>Vendor Signup Form</h1>
+      <h1 className="home__banner">Vendor Signup Form</h1>
       <div className="form-holder">
         <Form createSubmit={props.createSubmit} />
       </div>

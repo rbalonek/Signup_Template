@@ -9,11 +9,11 @@ import emailjs from "emailjs-com";
 
 function App() {
   const [vendors, setVendors] = useState([]);
-  const serviceID = "service_ovt8ibf"; //ADD
-  const templateID = "template_"; //ADD
-  const templateIDForVendor = "template_"; //ADD
+  const serviceID = "service_bob_gmail"; //ADD
+  // const templateID = "template_Template_App"; //ADD
+  const templateIDForVendor = "template_Template_App"; //ADD when you have vendor
 
-  const userID = "user_XVfNE2H6spG84iUkZovco"; //ADD
+  const userID = "user_Blpwinwws9EdtYZw9FBKd"; //ADD
 
   useEffect(() => {
     const fetchVendors = async () => {
@@ -26,21 +26,26 @@ function App() {
     const newVendor = await postVendor(formData);
     setVendors((prevState) => [...prevState, newVendor]);
     //
-    const templateParams = {
-      send_to: "", //ADD
-      cc_to: "", //ADD
-      reply_to: "", //ADD
-      to_name: "", //ADD
-      message: `You have a new vendor, ${formData.name} from ${formData.company}.`,
-    };
+    // const templateParamsForClient = {
+    //   send_to: "", //ADD
+    //   cc_to: "", //ADD
+    //   reply_to: "", //ADD
+    //   to_name: "", //ADD
+    //   message: `You have a new vendor, ${formData.name} from ${formData.company}.`,
+    // };
     const templateParamsForVendor = {
       send_to: `${formData.email}`,
-      reply_to: "", //ADD
+      reply_to: "rdevbob@gmail.com", //ADD
       from_name: "Vendor Signup Form", //ADD
       to_name: `${formData.name}`,
       company_name: `${formData.company}`,
     };
-    emailjs.send(serviceID, templateID, templateParams, userID);
+    // emailjs.send(
+    //   serviceID,
+    //   // templateID,
+    //   // templateParamsForClient,
+    //   userID
+    // );
     emailjs.send(
       serviceID,
       templateIDForVendor,
@@ -49,7 +54,7 @@ function App() {
     );
 
     alert(`Vendor ${formData.company} Added!`);
-
+    console.log(`Vendor ${formData.company} Added!`);
     //
   };
 

@@ -5,14 +5,20 @@
 .form-holder {
   width: 500px;
   align-items: center;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
   /* border: solid black; */
 }
-.logo {
+
+.home__banner {
   height: 80px;
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 100%;
+  background-color: red;
+  position: relative;
+  bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 @media (max-width: 650px) {
   .form-holder {
