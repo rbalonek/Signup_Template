@@ -5,7 +5,7 @@
 .form-holder {
   width: 500px;
   align-items: center;
-  /* margin-bottom: 100px; */
+  margin-bottom: 20px;
   /* border: solid black; */
 }
 
@@ -19,6 +19,10 @@
   justify-content: center;
   align-items: center;
   color: white;
+}
+.backend__button-holder {
+  /* position: relative; */
+  /* bottom: 80px; */
 }
 @media (max-width: 650px) {
   .form-holder {

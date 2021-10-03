@@ -15,7 +15,7 @@ export default function Home(props) {
   return (
     <div className="home__container">
       <h1 className="home__banner">Vendor Signup Form</h1>
-      <div style={{ marginBottom: "20px" }}>
+      <div className="backend__button-holder">
         <Button onClick={handleClick} variant="outlined" color="primary">
           Backend
         </Button>
