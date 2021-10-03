@@ -15,6 +15,8 @@ _They wanted email notifications when a vendor signs up. One notification to the
 
 _I also setup a "backend" for them, so they can View / delete the vendors._
 
+## Steps
+
 <br />
 rails db:create
 <br />
