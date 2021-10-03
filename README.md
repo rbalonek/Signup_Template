@@ -31,7 +31,11 @@ Change API config
 SEARCH //ADD for changes needed
 <br />
 <br />
-heroku create <name of your backend>
+heroku create --remote heroku-18 --stack heroku-18 <your app name>-heroku-18
+<br />
+OR 
+<br />
+heroku stack:set heroku-18 -a <app name>
 <br />
 git commit -m "message here"
 <br />
