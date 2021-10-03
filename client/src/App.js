@@ -46,6 +46,7 @@ function App() {
     //   // templateParamsForClient,
     //   userID
     // );
+    console.log(`Vendor ${formData.company} Added!`);
     emailjs.send(
       serviceID,
       templateIDForVendor,
@@ -54,7 +55,7 @@ function App() {
     );
 
     alert(`Vendor ${formData.company} Added!`);
-    console.log(`Vendor ${formData.company} Added!`);
+
     //
   };
 
