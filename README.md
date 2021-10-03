@@ -4,11 +4,16 @@ React
 Rails
 Email
 
-#Description
-This app is a prototype app for a client who needed a sign up form for vendors at a health fair.<br/>
-They wanted email notifications when a vendor signs up, one to the vendor, and a notification for the client. <br />
-I also setup a "backend" for them, so they can see / delete the vendors.
-... For later, add all CRUD
+## Description
+
+_This app is a prototype app for a client who needed a sign up form for vendors at a health fair._
+<br/>
+
+_They wanted email notifications when a vendor signs up. One notification to the vendor, and a notificationß for the client._
+
+ <br />
+
+_I also setup a "backend" for them, so they can View / delete the vendors._
 
 <br />
 rails db:create
