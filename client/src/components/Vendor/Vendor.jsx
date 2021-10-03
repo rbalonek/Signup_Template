@@ -72,7 +72,7 @@ export default function Vendor(props) {
       {props.vendor.snackBring === "YES" && (
         <p>Snacks: {props.vendor.snacks}</p>
       )}
-      <Button onClick={handleOpen} color="secondary" variant="outlined">
+      <Button onClick={handleOpen} variant="contained" color="error">
         Delete
       </Button>
 
@@ -92,7 +92,7 @@ export default function Vendor(props) {
           <div className="buttons">
             <Button
               onClick={handleCloseDelete}
-              color="secondary"
+              color="error"
               variant="outlined"
             >
               Yes, Delete
