@@ -29,3 +29,10 @@ Rails g scaffold Vendor name company phone address email service description lia
 Change API config
 <br />
 SEARCH //ADD for changes needed
+<br />
+<br />
+git commit -m "message here"
+<br />
+git push heroku master
+<br />
+heroku run rails db:migrate
