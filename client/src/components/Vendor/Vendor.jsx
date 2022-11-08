@@ -25,7 +25,8 @@ export default function Vendor(props) {
   const handleClose = () => {
     setOpen(false);
   };
-  const handleCloseDelete = () => {
+  const handleCloseDelete = (e) => {
+    e.preventDefault();
     setOpen(false);
     props.handleDelete(props.vendor.id);
   };

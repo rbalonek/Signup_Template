@@ -2,8 +2,8 @@ import axios from "axios";
 
 const baseUrl =
   process.env.NODE_ENV === "production"
-    ? "https://signup-template.herokuapp.com/" //ADD
-    : "http://localhost:3000";
+    ? "https://signup-template-rails-db-db.fly.dev/" //"https://signup-template.herokuapp.com/"
+    : "http://localhost:3000/"; //"http://localhost:3000";
 
 const api = axios.create({
   baseURL: baseUrl,
